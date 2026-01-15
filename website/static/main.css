@@ -1,0 +1,459 @@
+
+@font-face {
+  font-family: 'MyFont'; 
+  src: url('fonts/font-Thin.woff2') format('woff2'),
+       url('fonts/font-Thin.woff') format('woff'),
+       url('fonts/font-Thin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/font-Light.woff2') format('woff2'),
+       url('fonts/font-Light.woff') format('woff'),
+       url('fonts/font-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/font-Regular.woff2') format('woff2'),
+       url('fonts/font-Regular.woff') format('woff'),
+       url('fonts/font-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/font-Medium.woff2') format('woff2'),
+       url('fonts/font-Medium.woff') format('woff'),
+       url('fonts/font-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/font-Bold.woff2') format('woff2'),
+       url('fonts/font-Bold.woff') format('woff'),
+       url('fonts/font-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+    --primary-color: #192e4b;
+    --yellow-color: #FEC400;
+    --margin-base: 0.1rem;
+}
+.grow {
+    flex-grow: 1;
+}
+.font-bold {
+    font-weight: 700;
+}
+.font-xtralight {
+    font-weight: 200;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+.mb-2 {
+    margin-bottom: calc(var(--margin-base) * 2);
+}
+.mb-10 {
+    margin-bottom: calc(var(--margin-base) * 10);
+}
+.mb-20 {
+    margin-bottom: calc(var(--margin-base) * 20);
+}
+.mt-0 {
+    margin-top: 0;
+}
+.mt-2 {
+    margin-top: calc(var(--margin-base) * 2);
+}
+.mt-4 {
+    margin-top: calc(var(--margin-base) * 4);
+}
+.mt-10 {
+    margin-top: calc(var(--margin-base) * 10);
+}
+.font-lg {
+    font-size: 1.25rem;
+}
+.font-xl {
+    font-size: 1.75rem;
+}
+.font-2xl {
+    font-size: 2rem;
+}
+.font-3xl {
+    font-size: 2.5rem;
+}
+.font-4xl {
+    font-size: 3rem;
+}
+.text-white {
+    color: #fff;
+}
+.text-yellow {
+    color: var(--yellow-color);
+}
+body {
+    font-family: 'MyFont', sans-serif;
+}
+
+#fullscreen-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.0s ease, visibility 0.0s ease;
+    pointer-events: all;
+}
+#fullscreen-loader img {
+    max-width: 200px;
+    animation: fade-pulse 1s infinite ease-in-out;
+}
+@keyframes fade-pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#fullscreen-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.header {
+    padding: 1rem 0.75rem;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header img {
+    max-height: 100%;
+    max-width: 40dvw;
+}
+.yellow-btn {
+    background-color: var(--yellow-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    width: max-content;
+    transition: all 0.3s ease;
+}
+@media(hover: hover) and (pointer: fine) {
+    .yellow-btn:hover {
+        opacity: 0.8;
+    }
+}
+.hero-section {
+    height: 50dvw;
+    max-height: 500px;
+    background-size: cover;
+    background-image: url('hero.jpg');
+    background-position: 60% 50%;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    margin-left: 2rem;
+}
+.hero-text h1 {
+    margin: 0;
+    font-size: 4rem;
+}
+.hero-text p {
+    font-weight: 200;
+}
+.fa-solid.fa-phone{
+    margin-right: 8px;
+}
+.quick-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.6rem 0 0 0;
+    margin-inline-start: 350px;
+}
+.quick-info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+    padding-inline: 7px;
+}
+.vl {
+    border-left: 1px solid #ccc;
+    height: 100px;
+}
+
+.quick-info-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    margin-block: 6px;
+    height: 50px;
+    align-self: center;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+.quick-info-text {
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    margin-block: 6px;
+    margin-inline: 2px;
+    flex-grow: 1;
+    font-weight: 400;
+    color: #777;
+}
+.icon-yellow-bg {
+    background-color: var(--yellow-color);
+    color: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 200px;
+    margin-bottom: 1rem;
+    width: 24px;
+    height: 24px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    min-height: 200px;
+    justify-content: space-around;
+    gap: 24px;
+    padding: 1rem 3rem;
+    background-image: 
+        linear-gradient(
+            color-mix(in srgb, var(--primary-color), transparent 0%),
+            color-mix(in srgb, var(--primary-color), transparent 3%),
+            color-mix(in srgb, var(--primary-color), transparent 10%)
+        ),
+        url('van.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.section-one {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+}
+.section-two {
+    order: 1;
+}
+.section-one-text {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    color: #fff;
+}
+.section-one-text h1 {
+    margin: 0;
+}
+
+.text-small {
+    font-size: 0.8rem;
+}
+.yellow-circle {
+    background-color: var(--yellow-color);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.section-two {
+    position: relative;
+    margin-top: 45px;
+}
+.floating-img {
+    position: absolute;
+    left: 12px;
+    top: -155px;
+    border-radius: 0 10px 10px 10px;
+}
+.floating-img img {
+    height: 200px;
+    border-radius: 0 10px 10px 10px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.testimonial-card {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 0.2rem;
+    border-radius: 10px;
+    align-items: center;
+}
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.get-quote {
+    align-self: flex-start;
+}
+.areas-served-section {
+    padding: 1rem 0;
+}
+.areas-served-title {
+    font-size: clamp(1.5rem, 1.8vw, 2rem);
+}
+footer {
+    background-color: var(--primary-color);
+    padding: 1rem 3rem;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.whatsapp-btn {
+    background-color: rgba(37, 212, 102, 0.6);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.fa-whatsapp {
+    margin-right: 5px;
+}
+@media(hover: hover) and (pointer: fine) {
+    .whatsapp-btn:hover {
+        opacity: 0.8;
+    }
+}
+.section-buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+@media (max-width: 1023px) {
+    .section {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+    .section-buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .section-one {
+        order: 1;
+        align-items: center;
+    }
+    .areas-served-section {
+        text-align: center;
+    }
+    .section-two {
+        order: 2;
+        margin-top: 0;
+    }
+    .yellow-circle {
+        margin-top: 6px;
+    }
+    .floating-img {
+        display: none;
+    }
+    .what-customers-say {
+        text-align: center;
+    }
+    .quick-info {
+        margin-inline-start: 0;
+    }
+    .get-quote {
+        align-self: center;
+    }
+}
+@media (max-width: 768px) {
+    .section {
+        padding: 1rem;
+    }
+    .section-one-text {
+        font-size: 0.68rem;
+    }
+    .hero-section {
+        background-size: cover;
+        height: 250px;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        color: #fff;
+        margin-left: 0;
+    }
+    .quick-info {
+        justify-content: space-evenly;
+        padding: 1.6rem 0 1.2rem 0;
+    }
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}

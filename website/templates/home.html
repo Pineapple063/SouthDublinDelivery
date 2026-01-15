@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Dublin Delivery</title>
+	<link rel="apple-touch-icon" href="{{url_for('static', filename='images/icon.ico')}}">
+	<link rel="shortcut icon" href="{{url_for('static', filename='icon.ico')}}">
+
+	<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+	<script src="https://kit.fontawesome.com/eef1c97ff5.js" crossorigin="anonymous"></script>
+</head>
+<noscript>
+  	<div style="color: red;">JavaScript is disabled on this browser. Please enable JavaScript to use this website.</div>
+</noscript>
+
+<body class="main-body">
+	<div id="fullscreen-loader" class="" style="z-index: 99999;">
+		<img src="{{url_for('static', filename='logo.jpg')}}">
+	</div>
+    <div class="header">
+        <img src="{{url_for('static', filename='header-logo.jpg')}}">
+		<a class="yellow-btn" href="tel:+353871200000">087 120 0000</a>
+    </div>
+	<div class="content">
+		<div class="hero-section">
+			<div class="hero-text">
+				<h1>Man With A Van</h1>
+				<h1>South Dublin</h1>
+				<p>Fast. Reliable. Local.</p>
+				<a class="yellow-btn" href="tel:+353871200000"><i class="fa-solid fa-phone"></i>087 120 0000</a>
+			</div>
+		</div>
+		<div class="quick-info">
+			<div class="quick-info-item vertical-line">
+				<i class="fa-solid fa-handshake icon-yellow-bg"></i>
+				<p class="quick-info-title">Local & Trusted</p>
+				<p class="quick-info-text">Reliable, fully insured, two-man team</p>
+			</div>
+			<div class="vl"></div>
+			<div class="quick-info-item vertical-line">
+				<i class="fa-solid fa-check icon-yellow-bg"></i>
+				<p class="quick-info-title">Removals & Deliveries</p>
+				<p class="quick-info-text">House moves, furniture & small removals</p>
+			</div>
+			<div class="vl"></div>
+			<div class="quick-info-item">
+				<i class="fa-solid fa-location-dot icon-yellow-bg"></i>
+				<p class="quick-info-title">Serving South Dublin</p>
+				<p class="quick-info-text">Short notice jobs & same day service</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-one mt-10">
+				<div class="section-one-text">
+					<h1>Reliable</h1>
+					<div class="yellow-circle"></div>
+					<h1>Affordable</h1>
+					<div class="yellow-circle"></div>
+					<h1>Local</h1>
+				</div>
+				<div class="subtitle-text-container">
+					<p class="text-white mt-4 mb-0">Man With A Van / Two-Man Team</p>
+				<p class="text-white text-small mt-2 mb-20">Short notice jobs, moves & deliveries in South Dublin</p>
+				</div>
+				<div class="section-buttons-container">
+					<a class="yellow-btn get-quote" href="tel:+353871200000">Get a Quote</a>
+					<a class="whatsapp-btn" href="https://wa.me/353871200000" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+				</div>
+				
+				<div class="areas-served-section">
+					<p class="font-bold text-white font-2xl mb-10 areas-served-title">Serving All of South Dublin</p>
+					<p class="text-white font-extraligt">Dundrum, Rathfarnham, Tallaght, Blackrock & nearby areas</p>
+				</div>
+			</div>
+			<div class="section-two">
+				<div class="testimonials-section">
+					<p class="font-bold text-white font-lg what-customers-say">What Our Customers Say</p>
+					<div class="testimonials-grid">
+						<div class="testimonial-card">
+							<div class="testimonial-text">
+								<p class="font-bold text-yellow mt-0 mb-2">Easy Moves</p>
+								<p class="text-white mt-2 mb-0 font-xtralight grow">Brilliant service, very professional and on time. Highly recommend!</p>
+							</div>
+						</div>
+						<div class="testimonial-card">
+							<div class="testimonial-text">
+								<p class="font-bold text-yellow mt-0 mb-2">Same Day Service</p>
+								<p class="text-white mt-2 mb-0 font-xtralight grow">Quick and reliable. The team have been great!</p>
+							</div>
+						</div>
+						<div class="testimonial-card">
+							<div class="testimonial-text">
+								<p class="font-bold text-yellow mt-0 mb-2">Great Value</p>
+								<p class="text-white mt-2 mb-0 font-xtralight grow">Top quality service at a very reasonable price. Will definitely use again.</p>
+							</div>
+						</div>
+						<div class="testimonial-card">
+							<div class="testimonial-text">
+								<p class="font-bold text-yellow mt-0 mb-2">Stress Free</p>
+								<p class="text-white mt-2 mb-0 font-xtralight grow">Handled my items with care and took the stress out of moving day.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="floating-img">
+				<img src="{{url_for('static', filename='img2.jpg')}}">
+			</div>
+		</div>
+		
+		<footer>
+			<p>&copy; 2026 South Dublin Delivery</p>
+		</footer>
+	</div>
+	<script>
+	document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("fullscreen-loader");e.classList.contains("hidden")||setTimeout((()=>{e.classList.add("hidden")}),1e3)}));
+	</script>
+</body>
+</html>
