@@ -274,7 +274,13 @@ body {
         linear-gradient(
             color-mix(in srgb, var(--primary-color), transparent 0%),
             color-mix(in srgb, var(--primary-color), transparent 3%),
-            color-mix(in srgb, var(--primary-color), transparent 10%)
+            color-mix(in srgb, var(--primary-color), transparent 10%),
+            color-mix(in srgb, var(--primary-color), transparent 10%),
+            color-mix(in srgb, var(--primary-color), transparent 10%),
+            color-mix(in srgb, var(--primary-color), transparent 10%),
+            color-mix(in srgb, var(--primary-color), transparent 10%),
+            color-mix(in srgb, var(--primary-color), transparent 10%),
+            color-mix(in srgb, var(--primary-color), transparent 0%)
         ),
         url('van.jpg');
     background-size: cover;
