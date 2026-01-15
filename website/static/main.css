@@ -239,6 +239,7 @@ body {
     height: 50px;
     align-self: center;
     font-size: clamp(1rem, 1.5vw, 2rem);
+    line-height: 100%;
 }
 .quick-info-text {
     text-align: center;
@@ -357,11 +358,20 @@ body {
 .get-quote {
     align-self: flex-start;
 }
-.areas-served-section {
-    padding: 1rem 0;
+.socials-section {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 24px;
+    justify-content: center;
 }
-.areas-served-title {
-    font-size: clamp(1.5rem, 1.8vw, 2rem);
+.socials-section a {
+    text-decoration: none;
+}
+.socials-section a i {
+    width: 24px;
+    height: 24px;
+    color: white;
 }
 footer {
     background-color: var(--primary-color);
@@ -409,9 +419,6 @@ footer {
     .section-one {
         order: 1;
         align-items: center;
-    }
-    .areas-served-section {
-        text-align: center;
     }
     .section-two {
         order: 2;
