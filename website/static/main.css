@@ -113,6 +113,8 @@
 }
 body {
     font-family: 'MyFont', sans-serif;
+    margin-inline: 8px;
+    margin-block: 0;
 }
 
 #fullscreen-loader {
@@ -456,5 +458,9 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 20px;
+    }
+    body {
+        margin-inline: 0;
+        margin-block: 0;
     }
 }
